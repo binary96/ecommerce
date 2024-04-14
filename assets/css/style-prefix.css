@@ -23,9 +23,9 @@
   --spanish-gray: hsl(0, 0%, 60%);
   --sonic-silver: hsl(0, 0%, 47%);
   --eerie-black: hsl(0, 0%, 13%);
-  --salmon-pink: hsl(353, 100%, 78%);
-  --sandy-brown: hsl(29, 90%, 65%);
-  --bittersweet: hsl(0, 100%, 70%);
+  --salmon-pink: hsl(138, 93%, 17%);
+  --sandy-brown: hsl(120, 100%, 50%);
+  --bittersweet: hsl(138, 97%, 49%);
   --ocean-green: hsl(152, 51%, 52%);
   --davys-gray: hsl(0, 0%, 33%);
   --cultured: hsl(0, 0%, 93%);
@@ -69,8 +69,169 @@
 
 }
 
+ion-icon {
+  pointer-events: none;
+}
 
+ion-icon:hover{
+  color: var(--sandy-brown);
+}
 
+tooltip { 
+  position: relative; 
+} 
+ 
+.tooltip1::after { 
+  content: "Profile"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip1:hover::after { 
+  display: block;
+} 
+
+.tooltip2::after { 
+  content: "Favorites"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip2:hover::after { 
+  display: block;
+} 
+
+.tooltip3::after { 
+  content: "Cart"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip3:hover::after { 
+  display: block;
+}
+
+.tooltip4::after { 
+  content: "Shop"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip4:hover::after { 
+  display: block;
+}
+
+.tooltip5::after { 
+  content: "Favorites"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip5:hover::after { 
+  display: block;
+}
+
+.tooltip6::after { 
+  content: "Home"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip6:hover::after { 
+  display: block;
+}
+
+.tooltip7::after { 
+  content: "Cart"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip7:hover::after { 
+  display: block;
+}
+
+.tooltip8::after { 
+  content: "Profile"; 
+  font-size: 10px;
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.tooltip8:hover::after { 
+  display: block;
+}
 
 
 /*-----------------------------------*\
@@ -516,6 +677,30 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 
 
+.login-btn {
+  border: none;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: var(--sandy-brown);
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background-color: var(--salmon-pink);
+  transform: scale(01.1);
+  color: white;
+  font-weight: bolder;
+}
+
+.login-btn:active {
+  transform: scale(0.8);
+  font-weight: bolder;
+}
+
+
+
+
 
 
 /*-----------------------------------*\
@@ -850,15 +1035,6 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
           border-radius: var(--border-radius-md);
 }
 
-.banner-subtitle {
-  color: var(--salmon-pink);
-  font-size: var(--fs-7);
-  font-weight: var(--weight-500);
-  text-transform: capitalize;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
 .banner-title {
   color: var(--eerie-black);
   font-size: var(--fs-1);
@@ -867,10 +1043,12 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   margin-bottom: 10px;
 }
 
-.banner-text { display: none; }
+.banner-text { 
+  display: none; 
+}
 
 .banner-btn {
-  background: var(--salmon-pink);
+  background: var(--sandy-brown);
   color: var(--white);
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -1156,9 +1334,18 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 .sidebar .showcase:not(:last-child) { margin-bottom: 15px; }
 
-.sidebar .showcase-img { -webkit-border-radius: var(--border-radius-sm); border-radius: var(--border-radius-sm); }
+.sidebar .showcase-img { 
+  -webkit-border-radius: var(--border-radius-sm); 
+  border-radius: var(--border-radius-sm); }
 
-.sidebar .showcase-content { width: -webkit-calc(100% - 90px); width: calc(100% - 90px); }
+.sidebar .showcase-content { 
+  width: -webkit-calc(100% - 90px); 
+  width: calc(100% - 90px); 
+}
+
+.showcase:hover {
+  border-radius: 50px;
+}
 
 .sidebar .showcase-title {
   color: var(--onyx);
@@ -1427,8 +1614,8 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .product-featured .add-cart-btn:hover {
-  background: var(--eerie-black);
-  color: var(--white);
+  background: var(--spanish-gray);
+  color: var(--eerie-black);
 }
 
 .product-featured .showcase-status { margin-bottom: 15px; }
@@ -1613,7 +1800,11 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   z-index: 3;
 }
 
-.product-grid .showcase:hover .showcase-actions { -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); }
+.product-grid .showcase:hover .showcase-actions { 
+  -webkit-transform: translateX(0); 
+  -ms-transform: translateX(0); 
+  transform: translateX(0); 
+}
 
 .product-grid .btn-action {
   background: var(--white);
@@ -1629,9 +1820,9 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .product-grid .btn-action:hover {
-  background: var(--eerie-black);
+  background: var(--salmon-pink);
   color: var(--white);
-  border-color: var(--eerie-black);
+  border-color: var(--salmon-pink);
 }
 
 .product-grid .showcase-content { padding: 15px 20px 0; }
@@ -1683,7 +1874,43 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 .product-grid del { color: var(--sonic-silver); }
 
 
+.btn-action-favorite-tooltip::after { 
+  content: "Add to Favorites"; 
+  font-size: 7px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 30%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.btn-action-favorite-tooltip:hover::after { 
+  display: block;
+} 
 
+.btn-action-add-tooltip::after { 
+  content: "Add to Cart"; 
+  font-size: 7px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: var(--salmon-pink);
+  color: #fff; 
+  padding: 5px;
+  border-radius: 5px; 
+  white-space: nowrap;
+} 
+ 
+.btn-action-add-tooltip:hover::after { 
+  display: block;
+} 
 
 
 /*-----------------------------------*\
@@ -2063,7 +2290,28 @@ footer {
 
 .footer-nav-item { padding: 3px 0; }
 
-.footer-nav-link,
+.footer-nav-link {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  -webkit-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+  transition: var(--transition-timing);
+}
+.footer-nav-link2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--sonic-silver);
+  font-size: var(--fs-7);
+  text-transform: lowercase;
+  -webkit-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+  transition: var(--transition-timing);
+}
 .footer-nav-item .content {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -2373,6 +2621,10 @@ footer {
   .product-featured .showcase-img {
     max-width: 450px;
     margin: auto;
+  }
+
+  .showcase:hover {
+    background-color: var(--sandy-brown);
   }
 
   .product-featured .countdown { gap: 20px; }

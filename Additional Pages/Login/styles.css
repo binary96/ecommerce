@@ -1,0 +1,243 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+    /**
+     * colors
+     */
+  
+    --spanish-gray: hsl(0, 0%, 60%);
+    --sonic-silver: hsl(0, 0%, 47%);
+    --eerie-black: hsl(0, 0%, 13%);
+    --salmon-pink: hsl(138, 93%, 17%);
+    --sandy-brown: hsl(120, 100%, 50%);
+    --bittersweet: hsl(138, 97%, 49%);
+    --ocean-green: hsl(152, 51%, 52%);
+    --davys-gray: hsl(0, 0%, 33%);
+    --cultured: hsl(0, 0%, 93%);
+    --white: hsl(0, 100%, 100%);
+    --onyx: hsl(0, 0%, 27%);
+  
+    /**
+     * typography
+     */
+  
+    --fs-1: 1.563rem;
+    --fs-2: 1.375rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.125rem;
+    --fs-5: 1rem;
+    --fs-6: 0.938rem;
+    --fs-7: 0.875rem;
+    --fs-8: 0.813rem;
+    --fs-9: 0.75rem;
+    --fs-10: 0.688rem;
+    --fs-11: 0.625rem;
+  
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
+  
+    /**
+     * border-radius
+     */
+  
+    --border-radius-md: 10px;
+    --border-radius-sm: 5px;
+  
+    /**
+     * transition 
+     */
+  
+    --transition-timing: 0.2s ease;
+  
+  }
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(banner-4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(1px);
+}
+
+
+.box {
+    opacity: 0.8;
+    position: relative;
+    width: 380px;
+    height: 600px;
+    background: var(--bittersweet);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, var(--salmon-pink), var(--sandy-brown));
+    transform-origin: bottom right;
+    animation: animate 10s linear infinite;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,var(--salmon-pink), var(--sandy-brown));
+    transform-origin: bottom right;
+    animation: animate 10s linear infinite;
+    animation-delay: -5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    color: var(--sandy-brown);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.input-box input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.input-box span {
+    position: absolute;
+    left: 0;
+    font-style: italic;
+    padding: 20px 0px 10px;
+    font-size: 12px;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.input-box input:valid ~ span,
+.input-box input:focus ~ span
+{
+    color: var(--sandy-brown);
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.input-box i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--sandy-brown);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.input-box input:valid ~ i,
+.input-box input:focus ~ i
+{
+    height: 40px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    margin: 10px 100px;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    font-weight: bold;
+    text-decoration: none;
+   
+}
+
+.links a:hover {
+    color: var(--sandy-brown);
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    background: var(--salmon-pink);
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 900;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+}
+
+input[type="submit"]:hover {
+    color: var(--salmon-pink);
+    background-color: var(--sandy-brown);
+}
+
+input[type="submit"]:active {
+    opacity: 0.2;
+}

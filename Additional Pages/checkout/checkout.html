@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h2>Checkout</h2>
+  
+  <!-- Products -->
+  <div class="products">
+    <div class="product">
+      <span class="product-name">Product 1</span>
+      <span class="product-price">$10.00</span>
+    </div>
+    <div class="product">
+      <span class="product-name">Product 2</span>
+      <span class="product-price">$20.00</span> 
+    </div>
+    <!-- Add more products here -->
+  </div>
+  
+  <!-- Shipping details -->
+  <h3>Shipping Details</h3>
+  <form id="shipping-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="address">Address:</label>
+    <textarea id="address" required></textarea>
+    <label for="city">City:</label>
+    <input type="text" id="city" required>
+    <label for="country">Country:</label>
+    <input type="text" id="country" required>
+  </form>
+  
+  <!-- Total -->
+  <div class="total">
+    <h3>Total</h3>
+    <span id="subtotal">Subtotal: $0.00</span><br>
+    <span id="shipping">Shipping: $0.00</span><br>
+    <span id="total">Total: $0.00</span>
+  </div>
+  
+  <!-- Payment -->
+  <h3>Payment</h3>
+  <form id="payment-form">
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" onchange="hideIcon(this);" value="5xxxxxxx" required>
+    <label for="expiry">Expiry Date:</label>
+    <input type="text" id="expiry" required>
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" required>
+  </form>
+  
+  <button id="submit-btn" onclick="submitForm()">Submit</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
